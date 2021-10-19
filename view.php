@@ -29,6 +29,7 @@
         ?>
         <div class="col-lg-5 mx-auto">
             <div class="card shadow">
+                <div class="card-header text-center h4 text-primary">Single Student List</div>
                 <div class="card body">                          
                     <table class="table">
                             <tbody>
