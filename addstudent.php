@@ -31,7 +31,7 @@ $connect = mysqli_connect('localhost','root','','STUDENT');
             <div class="card shadow-lg">
                 <div class="card-header text-center text-primary h3">Add Student</div>
                 <div class="card-body">
-                        <form action="show.php" method="post">
+                        <form action="addstudent.php" method="post">
                             <div class="mb-3">
                                 <label>Student Name</label>
                                 <input type="text" name="student_name" required="" class="form-control">
@@ -56,15 +56,17 @@ $connect = mysqli_connect('localhost','root','','STUDENT');
                             $student_dob = $_POST['student_dob'];
                             $student_doj = $_POST['student_doj'];
 
-                            $query = mysqli_query($connect, "INSERT INTO Students(student_name,student_dob,student_doj)
+                            $query = mysqli_query($connect, "INSERT INTO students(student_name,student_dob,student_doj)
                             value ('$student_name','$student_dob','$student_doj')");
 
+                            
                             if($query){
-                                        echo "<div class='alert alert-success'>Student Data insert successfully</div>";
+                                echo "<script>open('show.php','_self')</script>";
                             }
-                            else {
-                                echo "<div class='alert alert-success'>Student Data insert failed</div>";
+                            else{
+                                echo "fail";
                             }
+                            
                         }
                     ?>
                 </div>

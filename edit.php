@@ -63,7 +63,7 @@
                              
 
                             if($query){
-                                echo "<script>open('index.php','_self')</script>";
+                                echo "<script>open('show.php','_self')</script>";
                             }
                             else{
                                 echo "fail";

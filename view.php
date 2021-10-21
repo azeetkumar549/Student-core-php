@@ -24,7 +24,7 @@
     <div class="row">
         <?php
         $id = $_GET['view'];
-        $calling = mysqli_query($connect,"select * from students where student_no='$id'");
+        $calling = mysqli_query($connect,"select * from Students where student_no='$id'");
             $data = mysqli_fetch_array($calling);
         ?>
         <div class="col-lg-5 mx-auto">
